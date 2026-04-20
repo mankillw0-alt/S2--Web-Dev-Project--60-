@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <svg style="display: none;">
+        <symbol id="plane-graphic" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M21,16L21,14L13,9L13,3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" />
+        </symbol>
+    </svg>
     <!--Navigation Bar-->
     <nav class="nav">
         <div class="brand">Holidae</div>
@@ -47,6 +52,12 @@
         <section class="scene">
             <div class="cinematic-card">
                 <img src="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&w=1600">
+                <svg class="plane-land"><use href="#plane-graphic"></use></svg>
+                <div class="info-slide">
+                    <h3>Maldives</h3>
+                    <p>Azure horizons, overwater villas, private escapes above crystal lagoons.</p>
+                    <div class="tag">dhs 1200</div>
+                </div>
             </div>
         </section>
 
