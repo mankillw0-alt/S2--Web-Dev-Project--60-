@@ -1,67 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="day">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Holidae | Interactive journey</title>
+    <title>holidae | Interactive Journey</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <svg style="display: none;">
         <symbol id="plane-graphic" viewBox="0 0 24 24">
             <path fill="currentColor" d="M21,16L21,14L13,9L13,3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" />
         </symbol>
     </svg>
-    <!--Navigation Bar-->
-    <nav class="nav">
-        <div class="brand">Holidae</div>
+
+    <nav class="glass-nav">
+        <div class="brand">holidae</div>
         <div class="nav-items">
             <a href="#hero">Home</a>
             <a href="#explore">Explore</a>
-            <a href="login.html">login</a>
-            <a href="signup.hmtl">Sign-up</a>
-            <button id="mode-switch" aria-label="Toggle theme">🌓</button>
+            <a href="login.html">Login</a>
+            <a href="signup.html" class="signup-btn">Sign Up</a>
+            <button id="mode-switch" aria-label="Toggle theme">🌙 Night</button>
         </div>
     </nav>
-    <!--Hero-->
+
     <section id="hero" class="hero-gate">
-        <div class="logo-orbit-box">
+        <div class="sky-engine">
             <div class="sun"></div>
             <div class="moon"></div>
             <div class="stars"></div>
             <div class="sky-gradient-overlay"></div>
         </div>
-
+        
         <div class="hero-inner">
-            <h1 class="logo-orbit-box"></h1>
-            <div class="orbit-ring">
-                <svg class="orbit-plane"><use href="#plane-graphic"></use></svg>
+            <div class="logo-orbit-box">
+                <h1 class="logo-title">holidae</h1>
+                <div class="orbit-ring">    
+                    <svg class="orbit-plane"><use href="#plane-graphic"></use></svg>
+                </div>
+                <p class="hero-tagline">Scroll through a cinematic journey of destinations.</p>
             </div>
-            <p class="hero-tagline">Scroll through a cinematic journey of destination</p>
         </div>
 
-        <div class="scroll to indicator">
-            <span>scroll to begin</span>
+        <div class="scroll-indicator">
+            <span>Scroll to begin</span>
             <div class="scroll-arrow"></div>
         </div>
     </section>
-    
-    <!--Main scroll area-->
-    <main id="explore" class="movie-reel">
 
-        <section class="scene">
-            <div class="cinematic-card">
-                <img src="https://images.pexels.com/photos/1450353/pexels-photo-1450353.jpeg?auto=compress&w=1600">
-                <svg class="plane-land"><use href="#plane-graphic"></use></svg>
-                <div class="info-slide">
-                    <h3>Maldives</h3>
-                    <p>Azure horizons, overwater villas, private escapes above crystal lagoons.</p>
-                    <div class="tag">dhs 1200</div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-    
+    <script src="script.js"></script>
 </body>
 </html>
