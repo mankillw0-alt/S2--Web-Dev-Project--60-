@@ -1,91 +1,72 @@
 :root {
-    --text:white;
+    --text: #ffffff;
     --bg: #050814;
     --accent: #00d4ff;
-    --card-glass: rgba(0,0,0,0.35);
-    --nav-glass: rgba(0,0,0,0.35);
-
+    --nav-glass: rgba(0, 0, 0, 0.35);
 }
+
 [data-theme="day"] {
-    --text:#111827;
-    --bg:#f3f4f6;
-    --accent:#2563eb;
-    --card-glass:rgba(255,255,255,0.7);
-    --nav-glass:rgba(255,255,255,0.7);
-}
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    --text: #111827;
+    --bg: #f3f4f6;
+    --accent: #2563eb;
+    --nav-glass: rgba(255, 255, 255, 0.6);
 }
 
-body{
-    background:radical-gradient(circle at top, #020617,var (--bg));
-    color:var(--text);
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    transition: background 0.8s ease,color 0.4s ease;
-    overflow-x:hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/*Navigation*/
-.glass nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-    display:flex;
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, sans-serif;
+    transition: background 0.8s ease, color 0.4s ease;
+    overflow-x: hidden;
+}
+
+/* NAVIGATION */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 18px 40px;
     backdrop-filter: blur(14px);
-    background:var(--nav-glass);
-    border-bottom:1px solid rgba(148,163,184,0.3);
-
+    background: var(--nav-glass);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.3);
 }
+
+.brand {
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: 0.12em;
+    text-transform: lowercase;
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
 .signup-btn {
-    padding:6px 14px;
-    border-radius:999px;
-    background:var(--accent);
-    color:white !important;
-    font-weight:700;
-    transition:0.2s ease;
-}
-.signup-btn:hover{
-    opacity:0.85;
-    transform:translateY(-2px);
-}
-.brand{
-    font-weight:900;
-    font-size:1.6rem;
-    letter-spacing:0.12em;
-    text-transform:lowercase;
-}
-.nav-item {
-    display:flex;
-    align-items:center;
-    gap:24px
-
-}
-.nav-item a{
-    text-decoration:none;
-    color:var(--text);
-    font-weight:600;
-    font-size:0.95rem;
-    position:relative;
-}
-.nav-items a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
+    padding: 6px 14px;
+    border-radius: 999px;
     background: var(--accent);
-    transition: width 0.2s ease;
-}
-
-.nav-items a:hover::after {
-    width: 100%;
+    color: white !important;
+    font-weight: 700;
 }
 
 #mode-switch {
@@ -95,24 +76,147 @@ body{
     padding: 6px 14px;
     border-radius: 999px;
     cursor: pointer;
-    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* HERO & ANIMATED BACKGROUND */
+.hero-gate {
+    height: 100vh;
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 6px;
-    transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
+    justify-content: center;
+    overflow: hidden;
 }
 
-#mode-switch:hover {
-    transform: translateY(-1px);
+.sky-engine {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(180deg, #0ea5e9, #1d4ed8);
+    animation: skyShift 40s infinite linear;
 }
 
-/**/
-.hero-gate{
-    height:100vh;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    overflow:hidden;
-    padding-top: 70px;
+.sky-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255, 255, 255, 0.2), transparent 55%);
+}
+
+/* CELESTIAL OBJECTS */
+.sun, .moon {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin: -45px;
+}
+
+.sun {
+    background: radial-gradient(circle, #fff, #ffcc00);
+    box-shadow: 0 0 40px #ffcc00;
+    animation: orbit 40s infinite linear;
+}
+
+.moon {
+    background: #f5f3ce;
+    box-shadow: 0 0 30px #e5e7eb;
+    animation: orbit 40s infinite linear reverse;
+    opacity: 0;
+}
+
+[data-theme="night"] .sun { opacity: 0; }
+[data-theme="night"] .moon { opacity: 1; }
+
+.stars {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at 10% 20%, #fff 1px, transparent 0);
+    background-size: 200px 200px;
+    opacity: 0;
+}
+
+[data-theme="night"] .stars { opacity: 0.5; }
+
+/* LOGO & ORBIT */
+.logo-orbit-box {
+    position: relative;
+    text-align: center;
+}
+
+.logo-title {
+    font-size: clamp(3.5rem, 10vw, 6rem);
+    font-weight: 900;
+    letter-spacing: 0.2em;
+}
+
+.orbit-ring {
+    position: absolute;
+    inset: -80px;
+    border-radius: 999px;
+    border: 1px dashed rgba(248, 250, 252, 0.4);
+    animation: rotate 12s infinite linear;
+}
+
+.orbit-plane {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: -21px;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    color: var(--text);
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0.8;
+}
+
+.scroll-arrow {
+    width: 2px;
+    height: 26px;
+    background: var(--text);
+    margin: 8px auto 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-arrow::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: var(--accent);
+    animation: scrollPulse 1.4s infinite;
+}
+
+/* KEYFRAMES */
+@keyframes skyShift {
+    0%, 100% { filter: hue-rotate(0deg); }
+    50% { filter: hue-rotate(15deg); }
+}
+
+@keyframes orbit {
+    from { transform: rotate(0deg) translateX(42vw) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(42vw) rotate(-360deg); }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes scrollPulse {
+    0% { top: -100%; }
+    100% { top: 120%; }
 }
