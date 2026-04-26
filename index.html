@@ -1,54 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="day">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>holidae | Interactive Journey</title>
+    <title>Holidae — Travel Differently</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <svg style="display: none;">
-        <symbol id="plane-graphic" viewBox="0 0 24 24">
-            <path fill="currentColor" d="M21,16L21,14L13,9L13,3.5A1.5,1.5 0 0,0 11.5,2A1.5,1.5 0 0,0 10,3.5V9L2,14V16L10,13.5V19L8,20.5V22L11.5,21L15,22V20.5L13,19V13.5L21,16Z" />
-        </symbol>
-    </svg>
-
-    <nav class="glass-nav">
-        <div class="brand">holidae</div>
-        <div class="nav-items">
-            <a href="#hero">Home</a>
-            <a href="#explore">Explore</a>
-            <a href="login.html">Login</a>
-            <a href="signup.html" class="signup-btn">Sign Up</a>
-            <button id="mode-switch" aria-label="Toggle theme">🌙 Night</button>
-        </div>
+    <nav class="navbar" id="navbar">
+        <a class="brand" href="#">holidae</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"></button>
     </nav>
-
-    <section id="hero" class="hero-gate">
-        <div class="sky-engine">
-            <div class="sun"></div>
-            <div class="moon"></div>
-            <div class="stars"></div>
-            <div class="sky-gradient-overlay"></div>
-        </div>
-        
-        <div class="hero-inner">
-            <div class="logo-orbit-box">
-                <h1 class="logo-title">holidae</h1>
-                <div class="orbit-ring">    
-                    <svg class="orbit-plane"><use href="#plane-graphic"></use></svg>
-                </div>
-                <p class="hero-tagline">Scroll through a cinematic journey of destinations.</p>
-            </div>
-        </div>
-
-        <div class="scroll-indicator">
-            <span>Scroll to begin</span>
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+    
 </body>
 </html>
