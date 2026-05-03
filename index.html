@@ -8,23 +8,89 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
         <a class="brand" href="#">holidae</a>
-        <button class="menu" id="menu" aria-label="Open menu">
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
             <span></span><span></span><span></span>
         </button>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
             <li><a href="#packages">Packages</a></li>
             <li><a href="package.html">Deals</a></li>
             <li><a href="#" class="nav-btn">Book Now</a></li>
         </ul>
     </nav>
-
-    <header class="header">
-        <div class="header-bg">
+    <!-- HERO -->
+    <header class="hero" id="hero">
+        <div class="hero-bg">
             <img src="https://images.pexels.com/photos/1619317/pexels-photo-1619317.jpeg?auto=compress&w=1800" alt="Tropical beach" class="hero-img" id="hero-img">
-            <div class="header-overlay"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <p class="hero-eyebrow fade-up delay-1">Escape. Explore. Experience.</p>
+            <h1 class="hero-title fade-up delay-2">Your Next<br><em>Adventure</em><br>Awaits.</h1>
+            <p class="hero-sub fade-up delay-3">Curated holiday packages for every dream destination. Affordable. Unforgettable.</p>
+            <div class="hero-actions fade-up delay-4">
+                <a href="#packages" class="btn-primary">Browse Packages</a>
+                <a href="package.html" class="btn-ghost">View Deals</a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
     </header>
-    
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span>✈ Maldives</span><span>· Bora Bora</span><span>· Kyoto</span>
+            <span>· Swiss Alps</span><span>· Santorini</span><span>· Tulum</span>
+            <span>· Reykjavik</span><span>· Barcelona</span><span>· London</span>
+            <span>· Grand Canyon</span><span>✈ Maldives</span><span>· Bora Bora</span>
+            <span>· Kyoto</span><span>· Swiss Alps</span><span>· Santorini</span>
+            <span>· Tulum</span><span>· Reykjavik</span><span>· Barcelona</span>
+        </div>
+    </div>
+
+    <!-- STATS BAR -->
+    <section class="stats-bar">
+        <div class="stat reveal-up">
+            <strong><span class="count" data-target="500">0</span>+</strong>
+            <span>Destinations</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat reveal-up" style="transition-delay:0.1s">
+            <strong><span class="count" data-target="12000">0</span>+</strong>
+            <span>Happy Travellers</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat reveal-up" style="transition-delay:0.2s">
+            <strong>4.9★</strong>
+            <span>Average Rating</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat reveal-up" style="transition-delay:0.3s">
+            <strong>24/7</strong>
+            <span>Support</span>
+        </div>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro">
+        <div class="intro-text reveal-up">
+            <p class="section-label">Why Holidae</p>
+            <h2>Travel shouldn't<br>break the bank.</h2>
+            <p>We handpick the world's most breathtaking destinations and package them at prices that make sense. Whether you're after white sand beaches, mountain escapes or city adventures — we've got you covered.</p>
+        </div>
+        <div class="intro-img-grid reveal-up" style="transition-delay:0.15s">
+            <img src="https://images.pexels.com/photos/672358/pexels-photo-672358.jpeg?auto=compress&w=800" alt="Beach" class="grid-img tall">
+            <img src="https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg?auto=compress&w=800" alt="Santorini" class="grid-img">
+            <img src="https://images.pexels.com/photos/2341830/pexels-photo-2341830.jpeg?auto=compress&w=800" alt="Mountains" class="grid-img">
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
