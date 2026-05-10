@@ -60,3 +60,12 @@ var counterObserver = new IntersectionObserver(function (entries) {
     });
 }, { threshold: 0.5 });
 counters.forEach(function (el) { counterObserver.observe(el); });
+
+/*-Back-top-*/
+var backTopBtn =document.getElementById('back-top');
+if (backTopBtn) {
+    backTopBtn.addEventListener('click',function(){
+        window.scrollTo({top:0, behavior: 'smooth'});
+    })
+}
+
