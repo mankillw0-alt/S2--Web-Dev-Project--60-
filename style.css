@@ -656,3 +656,10 @@ ul  { list-style:none; }
         box-shadow: var(--shadow-md);
         border-top: 1px solid var(--sand-dark);
     }
+    .nav-links.open { display: flex; }
+    .nav-links li { width: 100%; padding: 12px 0; border-bottom: 1px solid var(--sand-dark); }
+    .nav-links li:last-child { border-bottom: none; padding-top: 16px; }
+    .nav-links a { font-size: 1rem; }
+    .hero-content { padding: 0 24px; }
+    .hero-scroll-hint { right: 24px; bottom: 24px; }
+    
