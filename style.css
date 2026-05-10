@@ -624,3 +624,4 @@ ul  { list-style:none; }
 .footer-col strong { color: var(--white); font-size: 0.85rem; letter-spacing:0.08em; text-transform:uppercase; margin-bottom:4px; }
 .footer-col a { font-size: 0.88rem; color: rgba(255,255,255,0.45); transition: color var(--transition); }
 .footer-col a:hover { color: var(--gold-light); }
+.footer-bottom { display:flex; justify-content:space-between; align-items:center; padding-top:24px; font-size:0.8rem; flex-wrap:wrap; gap:12px; }
