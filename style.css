@@ -617,3 +617,6 @@ ul  { list-style:none; }
     border-bottom: 1px solid rgba(255,255,255,0.08);
     flex-wrap: wrap;
 }
+.footer-brand .brand { color: var(--white); display: block; margin-bottom: 6px; }
+.footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.4); }
+.footer-links { display: flex; gap: 64px; flex-wrap: wrap; }
