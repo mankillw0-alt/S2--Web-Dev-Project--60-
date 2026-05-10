@@ -638,3 +638,21 @@ ul  { list-style:none; }
     transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 .back-top:hover { background: var(--gold); border-color: var(--gold); color: var(--white); transform: translateY(-2px); }
+
+/*Responsive - Tablet*/
+.navbar { padding: 16px 24px; }
+    .navbar.scrolled { padding: 12px 24px; }
+
+    .hamburger { display: flex; }
+.nav-links {
+        display: none;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--sand);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 16px 24px 24px;
+        box-shadow: var(--shadow-md);
+        border-top: 1px solid var(--sand-dark);
+    }
