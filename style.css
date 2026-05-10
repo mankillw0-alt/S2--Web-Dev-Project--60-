@@ -662,4 +662,17 @@ ul  { list-style:none; }
     .nav-links a { font-size: 1rem; }
     .hero-content { padding: 0 24px; }
     .hero-scroll-hint { right: 24px; bottom: 24px; }
-    
+    .intro { grid-template-columns: 1fr; padding: 64px 24px; gap: 40px; }
+    .intro-text p { max-width: 100%; }
+    .intro-img-grid { grid-template-columns: 1fr 1fr; }
+    .grid-img.tall { grid-row: auto; min-height: 180px; }
+    .packages { padding: 64px 20px; }
+    .packages-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .video-section { grid-template-columns: 1fr; padding: 64px 24px; gap: 36px; }
+    .reviews { padding: 60px 20px; }
+    .reviews-grid { grid-template-columns: 1fr; gap: 20px; text-align: left; }
+    .stats-bar { padding: 20px 16px; }
+    .stat { padding: 8px 24px; }
+    .stat-divider { height: 30px; }
+    .footer { padding: 48px 24px 24px; }
+    .footer-links { gap: 36px; }
