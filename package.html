@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!--Navbar-->
+
+    <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <a class="brand" href="index.html">holidae</a>
         <button class="hamburger" id="hamburger" aria-label="Open menu">
@@ -21,7 +22,8 @@
             <li><a href="#book" class="nav-btn">Book Now</a></li>
         </ul>
     </nav>
-    <!--Package hero-->
+
+    <!-- PACKAGE HERO -->
     <header class="pkg-hero">
         <img src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&w=1800" alt="Bora Bora" class="pkg-hero-img">
         <div class="pkg-hero-overlay"></div>
@@ -34,25 +36,31 @@
                 <strong>AED 8,750</strong>
                 <span>per person</span>
             </div>
+        </div>
+    </header>
 
-            <div class="links">
-                <a href="index.html">Home</a>
-                <span>></span>
-                <a href="index.html#packages">Packages</a>
-                <span>></span>
-                <span>Bora Bora</span>
-            </div>
+    <!-- links -->
+    <div class="links">
+        <a href="index.html">Home</a>
+        <span>></span>
+        <a href="index.html#packages">Packages</a>
+        <span>></span>
+        <span>Bora Bora</span>
+    </div>
 
-            <!--Main content-->
-            <div class="pkg-layout">
+    <!-- MAIN TWO-COLUMN LAYOUT -->
+    <div class="pkg-layout">
 
         <main class="pkg-detail">
 
+            <!-- OVERVIEW -->
             <section class="pkg-overview reveal-up">
                 <p class="section-label">Overview</p>
                 <h2>Overwater bliss in the South Pacific</h2>
                 <p>Set in the heart of French Polynesia, Bora Bora is one of the world's most sought-after island destinations. Famous for its turquoise lagoon, dramatic Mount Otemanu, and luxurious overwater bungalows — this is the escape you've always imagined. Our package gives you 7 unforgettable nights with everything arranged, so all you do is arrive and unwind.</p>
             </section>
+
+            <!-- GALLERY -->
             <section class="pkg-gallery reveal-up" style="transition-delay:0.1s">
                 <p class="section-label">Gallery</p>
                 <div class="gallery-grid">
@@ -63,6 +71,8 @@
                     <img src="https://images.pexels.com/photos/2506923/pexels-photo-2506923.jpeg?auto=compress&w=600" alt="Landscape" class="gallery-sm">
                 </div>
             </section>
+
+            <!-- ITINERARY -->
             <section class="pkg-stay reveal-up" style="transition-delay:0.1s">
                 <p class="section-label">7-Night Itinerary</p>
                 <h2>Day by day</h2>
@@ -73,7 +83,7 @@
                             <h4>Arrival & Check-In</h4>
                             <p>Arrive at Bora Bora Airport, transfer to your overwater bungalow. Relax and watch the sunset over the lagoon with a welcome cocktail.</p>
                         </div>
-                        </div>
+                    </div>
                     <div class="stay-item">
                         <div class="stay-day">Day 2</div>
                         <div class="stay-body">
@@ -104,6 +114,8 @@
                     </div>
                 </div>
             </section>
+
+            <!-- WHAT'S INCLUDED -->
             <section class="pkg-includes reveal-up" style="transition-delay:0.1s">
                 <p class="section-label">What's Included</p>
                 <h2>Everything taken care of.</h2>
@@ -140,13 +152,16 @@
                     </div>
                 </div>
             </section>
+
         </main>
-        <!-- SIDEBAR -->
+
+        <!-- BOOKING SIDEBAR -->
         <aside class="pkg-sidebar" id="book">
+
             <div class="booking-card reveal-up">
                 <div class="booking-price">
                     <span>From</span>
-                    <strong>AED 11,750</strong>
+                    <strong>AED 8,750</strong>
                     <span>per person</span>
                 </div>
                 <form class="booking-form" onsubmit="handleBooking(event)">
@@ -177,6 +192,7 @@
                 <p class="booking-note" id="booking-msg"></p>
                 <p class="booking-reassurance">No payment needed yet. A Holidae agent will contact you within 24 hours.</p>
             </div>
+
             <div class="sidebar-other reveal-up" style="transition-delay:0.15s">
                 <p class="section-label">Other Packages</p>
                 <a href="index.html#packages" class="sidebar-pkg">
@@ -192,9 +208,12 @@
                     <div><strong>Kyoto</strong><span>From AED 5,320</span></div>
                 </a>
             </div>
+
         </aside>
 
     </div>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-top">
             <div class="footer-brand">
@@ -204,10 +223,10 @@
             <div class="footer-links">
                 <div class="footer-col">
                     <strong>Destinations</strong>
-                    <a href="#">Maldives</a>
-                    <a href="#">Bora Bora</a>
-                    <a href="#">Kyoto</a>
-                    <a href="#">Santorini</a>
+                    <a href="index.html#packages">Maldives</a>
+                    <a href="package.html">Bora Bora</a>
+                    <a href="index.html#packages">Kyoto</a>
+                    <a href="index.html#packages">Santorini</a>
                 </div>
                 <div class="footer-col">
                     <strong>Company</strong>
@@ -219,12 +238,12 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <span>&copy; 2025 Holidae. All rights reserved.</span>
+            <span>© 2025 Holidae. All rights reserved.</span>
             <button id="back-top" class="back-top" aria-label="Back to top">↑ Top</button>
         </div>
     </footer>
 
     <script src="script.js"></script>
-        </div>
-    </header>
+
 </body>
+</html>
