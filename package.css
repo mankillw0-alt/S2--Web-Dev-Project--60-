@@ -1,0 +1,41 @@
+/* ---- PACKAGE HERO ---- */
+.pkg-hero {
+    position: relative;
+    height: 65vh;
+    min-height: 420px;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.pkg-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: heroZoom 8s ease forwards;
+}
+@keyframes heroZoom {
+    from { transform: scale(1.08); }
+    to   { transform: scale(1); }
+}
+.pkg-hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,6,2,0.85) 0%, rgba(10,6,2,0.35) 55%, transparent 100%);
+}
+.pkg-hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 0 56px 52px;
+}
+.pkg-hero-content .hero-eyebrow { margin-bottom: 10px; }
+.pkg-hero-content .hero-title { font-size: clamp(2.8rem, 7vw, 5rem); margin-bottom: 8px; }
+.pkg-hero-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+.pkg-hero-price { display: flex; align-items: baseline; gap: 8px; color: var(--white); }
+.pkg-hero-price span { font-size: 0.88rem; color: rgba(255,255,255,0.65); }
+.pkg-hero-price strong { font-family: var(--font-display); font-size: 2.2rem; color: var(--gold-light); }
