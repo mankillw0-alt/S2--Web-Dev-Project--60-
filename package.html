@@ -140,6 +140,43 @@
                     </div>
                 </div>
             </section>
+        </main>
+        <!-- SIDEBAR -->
+        <aside class="pkg-sidebar" id="book">
+            <div class="booking-card reveal-up">
+                <div class="booking-price">
+                    <span>From</span>
+                    <strong>AED 11,750</strong>
+                    <span>per person</span>
+                </div>
+                <form class="booking-form" onsubmit="handleBooking(event)">
+                    <div class="form-group">
+                        <label for="travel-date">Travel Date</label>
+                        <input type="date" id="travel-date" name="travel-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="travellers">Travellers</label>
+                        <select id="travellers" name="travellers">
+                            <option value="1">1 Person</option>
+                            <option value="2" selected>2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5">5+ People</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="full-name">Full Name</label>
+                        <input type="text" id="full-name" name="full-name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%; margin-top:8px;">Request to Book</button>
+                </form>
+                <p class="booking-note" id="booking-msg"></p>
+                <p class="booking-reassurance">No payment needed yet. A Holidae agent will contact you within 24 hours.</p>
+            </div>
         </div>
     </header>
 </body>
