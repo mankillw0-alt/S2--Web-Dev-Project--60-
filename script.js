@@ -25,13 +25,3 @@ if (backTopBtn) {
         window.scrollTo({top:0, behavior: 'smooth'});
     })
 }
-
-/*-Update form-*/
-function handleSubscribe(event) {
-    event.preventDefault();
-    var msg = document.getElementById('subscribe-msg');
-    if (msg) {
-        msg.textContent = 'You are on the list! Expect great deals soon.';
-    }
-    event.target.reset();
-}
