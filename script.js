@@ -1,5 +1,3 @@
-/* HOLIDAE — script.js */
-
 /* Navbar shrink on scroll */
 var navbar = document.getElementById('navbar');
 window.addEventListener('scroll', function () {
